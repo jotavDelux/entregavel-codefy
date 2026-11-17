@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#373036" />
+  <title>Obrigada, amor... 💗</title>
+  <meta name="description" content="Tenho um convite especial pra você!" />
+  <style>
+    :root {
+      --rosa-card: #f6d9e3;
+      --rosa-texto: #842d50;
+      --botao-texto: #263e59;
+    }
+    * { box-sizing: border-box; }
+    html { min-height:100%; background:#242124; }
+    body { margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif; background:#242124; color:white; }
+    .tela {
+      position:relative;
+      width:100%; max-width:420px;
+      min-height:100vh;
+      min-height:100dvh;
+      margin:auto;
+      overflow:hidden;
+      isolation:isolate;
+      background:#5a4548;
+    }
+    .tela::before {
+      content:"";
+      position:absolute; inset:-15px;
+      background-image:radial-gradient(ellipse 45% 35% at 53% 28%,rgba(148,55,43,.28),transparent 85%),linear-gradient(180deg, rgba(18,19,24,.30), rgba(22,17,22,.25) 40%, rgba(20,13,20,.28)), url('fundo-desfocado.jpg');
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:center center;
+      filter:blur(5px);
+      transform:scale(1.045);
+      z-index:-2;
+    }
+    .tela::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(180deg,rgba(21,17,22,.07),rgba(26,17,23,.16) 75%,rgba(32,19,27,.10));
+      z-index:-1; pointer-events:none;
+    }
+    .conteudo {
+      position:relative;
+      width:100%;
+      margin:0 auto;
+      padding:clamp(112px,20.65dvh,180px) 36px 62px;
+      text-align:center;
+    }
+    .foto {
+      width:108px; height:108px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #f9f3f2;
+      box-shadow:0 0 0 3px #0ba454, 0 0 12px 5px rgba(0,255,112,.68), 0 0 23px 5px rgba(0,255,122,.35);
+      display:block; margin:0 auto 17px;
+      background:#b58a76;
+    }
+    h1 {
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:30px;
+      font-weight:800;
+      font-style:italic;
+      letter-spacing:-1.2px;
+      line-height:1.12;
+      margin:0 0 5px;
+      color:#fff;
+      text-shadow:0 2px 3px rgba(0,0,0,.25);
+    }
+    .subtitulo {
+      font-size:13.75px;
+      font-weight:700;
+      line-height:1.37;
+      margin:0 auto;
+      max-width:330px;
+      color:#fff;
+      text-shadow:0 1px 2px rgba(0,0,0,.18);
+    }
+    .aviso {
+      text-align:left;
+      background:var(--rosa-card);
+      border-radius:16px;
+      margin:18px 0 24px;
+      padding:17px 18px 16px;
+      color:var(--rosa-texto);
+      box-shadow:0 5px 16px rgba(0,0,0,.16), 0 0 0 1px rgba(253,223,234,.16);
+      font-size:13px;
+      font-weight:600;
+      line-height:1.43;
+    }
+    .aviso p { margin:0; }
+    .aviso p+p { margin-top:8px; }
+    .botao {
+      width:100%; min-height:61px;
+      display:flex; align-items:center; justify-content:center;
+      gap:12px; border-radius:22px; border:0;
+      padding:14px 18px;
+      background:linear-gradient(180deg,#fff,#f6f6f6);
+      color:var(--botao-texto);
+      box-shadow:0 8px 14px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.9);
+      font:700 14.5px/1.2 Arial,Helvetica,sans-serif;
+      letter-spacing:.35px; text-decoration:none;
+      cursor:pointer;
+      transition:transform .15s ease,box-shadow .15s ease;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .botao:hover { transform:translateY(-2px); box-shadow:0 11px 20px rgba(0,0,0,.23); }
+    .botao:active { transform:scale(.985); }
+    .botao:focus-visible { outline:3px solid #46d4ff;outline-offset:4px; }
+    .telegram { width:28px;height:28px; flex:0 0 28px; }
+    @media (max-width:360px) {
+      .conteudo { padding-right:24px; padding-left:24px; }
+      h1 {font-size:28px;}
+      .aviso{font-size:12.7px;}
+      .botao{font-size:13.3px;gap:8px;}
+    }
+    @media (max-height:700px) {
+      .conteudo{padding-top:clamp(45px,12dvh,95px);padding-bottom:25px;}
+      .foto{width:93px;height:93px;margin-bottom:13px;}
+      h1{font-size:27px;}
+      .aviso{margin-top:14px;margin-bottom:17px;padding-top:13px;padding-bottom:13px;}
+      .botao{min-height:55px;}
+    }
+    @media (min-width:500px) {
+      body{display:flex;justify-content:center;align-items:center;padding:24px;background:radial-gradient(circle at center,#503c48,#1e1d23 75%);}
+      .tela{min-height: min(803px, calc(100dvh - 48px));box-shadow:0 25px 80px rgba(0,0,0,.5);border-radius:14px;}
+      .conteudo{padding-top: min(165px,20dvh);}
+    }
+    @media (prefers-reduced-motion:reduce){.botao{transition:none;}}
+  </style>
+</head>
+<body>
+  <main class="tela">
+    <div class="conteudo">
+      <img class="foto" src="foto-perfil.jpg" alt="Foto do perfil" />
+      <h1>Obrigada, amor...</h1>
+      <p class="subtitulo">Você não faz ideia do que eu tô preparando pra gente 🔥</p>
+      <section class="aviso" aria-label="Aviso especial">
+        <p>Ops... tive um pequeno probleminha no Privacy 🥺</p>
+        <p>Mas pra não te deixar na mão, liberei o meu Grupinho VIP no Telegram. (De brinde alguns vazados)</p>
+        <p>Entra lá agora, que assim que o Privacy voltar, eu te adiciono pessoalmente. E já vai separando um tempinho pra mim... 💋</p>
+      </section>
+      <a class="botao" id="link-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Acessar grupo VIP no Telegram">
+        <svg class="telegram" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="#2CA5E0"/>
+          <path fill="#fff" d="M23.7 9.5 7.4 15.8c-1.1.44-1.1 1.07-.2 1.34l4.2 1.31 1.6 5.06c.2.56.1.78.69.78.46 0 .67-.21.93-.46l2.04-1.98 4.25 3.14c.78.43 1.34.21 1.54-.73L25.22 11c.27-1.17-.45-1.7-1.52-1.5ZM12 18.15l9.9-6.25c.5-.31.96-.14.58.2l-8.18 7.38-.32 3.45-1.98-4.78Z" transform="translate(-1 -1) scale(.96)"/>
+        </svg>
+        <span>ACESSAR GRUPO VIP 💙</span>
+      </a>
+    </div>
+  </main>
+  <script>
+    // Substitua pelo link real, por exemplo: https://t.me/seu_grupo
+    const TELEGRAM_URL = 'COLE_AQUI_O_LINK_DO_SEU_GRUPO';
+    const botao = document.getElementById('https://t.me/+hf1oyBKz1Fs5MzRh');
+    if (/^https:\/\/(t\.me|telegram\.me)\//i.test(TELEGRAM_URL)) {
+      botao.href = TELEGRAM_URL;
+    } else {
+      botao.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        alert('Configure seu link do Telegram na variável TELEGRAM_URL do arquivo HTML.');
+      });
+    }
+  </script>
+</body>
+</html>

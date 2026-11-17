@@ -1,0 +1,8 @@
+TELA VIP — COMO USAR
+
+1. Para abrir uma prévia, clique duas vezes em "index.html" (mantendo os dois arquivos JPG na mesma pasta) ou em "tela-vip.html" (versão independente).
+2. Para configurar o botão, abra o HTML em um editor e altere a variável TELEGRAM_URL para o seu link de grupo/canal, ex.: https://t.me/seu_grupo
+3. Para personalizar, altere o nome, os textos e as cores dentro do arquivo HTML.
+4. Para publicar, envie "index.html", "foto-perfil.jpg" e "fundo-desfocado.jpg" para a hospedagem, mantendo os nomes.
+
+As imagens foram recortadas da referência enviada e a tela se adapta a celulares.
